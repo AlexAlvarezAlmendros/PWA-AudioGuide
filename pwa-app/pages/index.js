@@ -2,8 +2,13 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
+import ES from '../public/Content.json'
 
 export default function Home() {
+  if (typeof window !== "undefined") {
+    window.localStorage.setItem('Guide', JSON.stringify(ES));
+  }
+  
   return (
     <div className={styles.container}>
       <Head>
@@ -18,13 +23,13 @@ export default function Home() {
           <p className={styles.infotext}>Select the floor where you are</p>
         </div>
         <div className={styles.main_div} >
-          <Link className={styles.menubutton} href="/visit">
+          <Link className={styles.menubutton} href={{pathname: '/visit',query: "floor=1" }}>
             <a><Image width={400} height={115} src="/topbtn.png"/></a>
           </Link>
-          <Link className={styles.menubutton} href="/visit">
+          <Link className={styles.menubutton} href={{pathname: '/visit',query: "floor=2" }}>
             <a><Image width={400} height={115} src="/centerbtn.png"/></a>
           </Link>
-          <Link className={styles.menubutton} href="/visit">
+          <Link className={styles.menubutton} href={{pathname: '/visit',query: "floor=3" }}>
             <a><Image width={400} height={115} src="/botombtn.png"/></a>
           </Link>
             
