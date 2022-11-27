@@ -20,7 +20,7 @@
 }
 
 .audiocontrols{
-  width: 90vw;
+  padding: 10vw;
   color: black;
   margin-bottom: 5vw;
 }
@@ -148,6 +148,7 @@ align-self: baseline;
   height: auto;
   padding-top: 5vw;
   padding-bottom: 5vw;
+  width: 90vw;
 }
 .main {
   background-color: rgb(240, 240, 240);
