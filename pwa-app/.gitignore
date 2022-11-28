@@ -9,7 +9,6 @@
 **/public/worker-*.js.map
 
 # dependencies
-/node_modules
 /.pnp
 .pnp.js
 
